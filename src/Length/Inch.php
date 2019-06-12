@@ -3,8 +3,22 @@ namespace  Jiny\Convert\Length;
 
 class Inch
 {
-   public function __construct()
+    private $value;
+
+    // $value
+
+//    public function __construct()
+//    {
+//        return $this->value * 3.97;
+//    }
+
+public function __construct($value)
    {
-       return $this->value * 3.97;
+       $this->value = $value;
+   }
+
+public function __invoke()
+   {
+    return $this->value;
    }
 }
