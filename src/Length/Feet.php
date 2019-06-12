@@ -1,12 +1,24 @@
 <?php
-// 길이변환
+namespace  Jiny\Convert\Length;
 
-namespace Jiny\Convert\Length;
-
-class Length
+class Feet
 {
-    public function __construct()
-    {
-        echo __CLASS__."가 생성되었습니다.";
-    }
+    private $value;
+
+    // $value
+
+//    public function __construct()
+//    {
+//        return $this->value * 3.97;
+//    }
+
+public function __construct($value)
+   {
+       $this->value = $value;
+   }
+
+public function __invoke()
+   {
+    return $this->value;
+   }
 }
