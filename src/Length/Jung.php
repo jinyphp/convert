@@ -18,6 +18,13 @@ class Jung {
     }
 
     /**
+     * 센티미터 변환
+     */
+    public function centi() {
+        return $this->value * 10909.0909;
+    }
+
+    /**
      * 미터 변환
      */
     public function meter() {
