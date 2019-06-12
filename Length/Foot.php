@@ -1,11 +1,10 @@
 <?php
 
-namespace Jiny\Convert;
+namespace Jiny\Convert\Base\Length;
 
-class Length
+use Jiny\Core\Base\File;
+
+class Foot
 {
-public function __construct()
-{
-    echo __class__."가 생성이 되었습니다.";
-}
+
 }
