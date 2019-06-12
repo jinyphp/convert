@@ -3,9 +3,6 @@
 
 namespace Jiny\Convert\Length;
 
-class Jung
-{
-    public function jung() {
-
-    }
+class Jung {
+    
 }
