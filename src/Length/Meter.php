@@ -19,4 +19,12 @@ class Meter
     {
         return $this->value; 
     }
+
+    /**
+     * 센치미터 변환
+     */
+    public function centi()
+    {
+        return $this->value * 100;
+    }
 }
