@@ -2,9 +2,11 @@
 
 namespace Jiny\Convert\Length;
 
-class Foot
+use Jiny\Convert\Unit;
+
+class Foot extends Unit
 {
-    private $value;
+    protected $value;
     
     /**
      * 객체 타입 상수지정
@@ -62,6 +64,8 @@ class Foot
 
     public function centi($value=null)
     {   
+        $this->conv($value,30.48);
+        /*
         if ($value){
             return $value * 30.48; 
         } else if($this->value) {
