@@ -67,6 +67,7 @@ class Meter
      */
     public function centi($value=null)
     {
+        
         if ($value) {
             // 입력한 값 기준으로 계산
             return $value * 100;
