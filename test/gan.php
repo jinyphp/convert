@@ -2,10 +2,11 @@
 
 require "../../../autoload.php";
 
-use Jiny\Convert\Length\Meter as LengthMeter;
+// 별칭
+use Jiny\Convert\Length\Gan as LengthGan;
 
-// $obj = new Jiny\Convert\Length\Meter(1);
-$obj = new LengthMeter(1);
+$obj = new Jiny\Convert\Length\Gan(1);
+$obj = new LengthGan(1);
 
 // 타입확인
 echo $obj::TYPE."\n";
@@ -18,4 +19,4 @@ echo $obj->centi()."\n";
 echo $obj->centi(2)."\n";
 
 // 헬퍼함수 처리
-echo convMeterCenti(3)."\n";
+echo convGanCenti(3);
