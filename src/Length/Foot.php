@@ -5,6 +5,7 @@ namespace Jiny\Convert\Length;
 class Foot
 {
     private $value;
+    
     public function __construct($value)
     {
         $this->value = $value;
@@ -17,7 +18,7 @@ class Foot
 
     public function centi()
     {   
-        return $this->value *30.48;
+        return $this->value * 30.48;
     }
 
     public function feet()
@@ -27,23 +28,22 @@ class Foot
 
     public function meter()
     {   
-        return $this->value *0.3048;
+        return $this->value * 0.3048;
     }
     public function inch()
     {   
-        return $this->value *12;
+        return $this->value * 12;
     }
     public function jung()
     {   
-        return $this->value *0.002794;
+        return $this->value * 0.002794;
     }
     public function gan()
     {   
-        return $this->value *0.16764;
+        return $this->value * 0.16764;
     }
     public function lee()
     {   
-        return $this->value *0.000776;
-    }
+        return $this->value * 0.000776;
     }
 }
