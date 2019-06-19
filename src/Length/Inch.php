@@ -44,13 +44,10 @@ class Inch
     {
        return $this->value * 0.000233;
     }
+
     public function gan()
     {
        return $this->value * 0.01397;
     }
 
-   
-
-    
-
-}
+   }
