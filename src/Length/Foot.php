@@ -64,37 +64,37 @@ class Foot extends Unit
 
     public function centi($value=null)
     {
-        $this->conv($value, 30.48);
+        return $this->conv($value, 30.48);
     }
 
     public function feet($value=null)
     {
-        $this->conv($value,1);
+        return $this->conv($value,1);
     }
 
     public function meter($value=null)
     {   
-        $this->conv($value,0.3048);
+        return $this->conv($value,0.3048);
     }
 
     public function inch($value=null)
     {   
-        $this->conv($value,12);
+        return $this->conv($value,12);
     }
 
     public function jung($value=null)
     {   
-        $this->conv($value,0.002794);
+        return $this->conv($value,0.002794);
     }
 
     public function gan($value=null)
     {   
-        $this->conv($value,0.16764);
+        return $this->conv($value,0.16764);
     }
 
     public function lee($value=null)
     {   
-        $this->conv($value,0.000776);
+        return $this->conv($value,0.000776);
     }
     
 }
