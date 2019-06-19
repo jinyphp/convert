@@ -16,8 +16,21 @@ class Meter
     {
         return self::TYPE;
     }
+
+    /**
+     * 싱글턴
+     */
+    private static $Instance;
+    public static function instance()
+    {
+        if (!isset(self::$Instance)) {
+            self::$Instance = new self();
+        }
+
+        return self::$Instance;
+    }
     
-    
+
     /**
      * 초기화
      */
