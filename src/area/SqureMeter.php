@@ -72,7 +72,7 @@ class SqureMeter
      return null;
    }
 
-   // 센치변환
+   // 헥타르변환
    public function hectAre($value=null)
    {
      if ($value) {
@@ -87,22 +87,22 @@ class SqureMeter
     return null;
   }
 
-  // 센치변환
-  public function pyeong($value=null)
-  {
-    if ($value) {
-       // 입력한 값 기준으로 계산
-       return $value * 0.3025;
-   } else if($this->value) {
-       // 설정 프로퍼티 기준으로 계산
-       return $this->value * 0.3025;
-   }
+     // 제곱킬로미터변환
+     public function squreKilo($value=null)
+     {
+       if ($value) {
+          // 입력한 값 기준으로 계산
+          return $value * 1e-6;
+      } else if($this->value) {
+          // 설정 프로퍼티 기준으로 계산
+          return $this->value * 1e-6;
+      }
+  
+      // 계산불가
+      return null;
+    }
 
-   // 계산불가
-   return null;
- }
-
- // 센치변환
+ // 제곱피트변환
  public function squreFeet($value=null)
  {
    if ($value) {
@@ -116,6 +116,36 @@ class SqureMeter
   // 계산불가
   return null;
 }
+
+// 제곱야드변환
+public function squreYard($value=null)
+{
+  if ($value) {
+     // 입력한 값 기준으로 계산
+     return $value * 1.19599;
+ } else if($this->value) {
+     // 설정 프로퍼티 기준으로 계산
+     return $this->value * 1.19599;
+ }
+
+ // 계산불가
+ return null;
+}
+
+  // 평변환
+  public function pyeong($value=null)
+  {
+    if ($value) {
+       // 입력한 값 기준으로 계산
+       return $value * 0.3025;
+   } else if($this->value) {
+       // 설정 프로퍼티 기준으로 계산
+       return $this->value * 0.3025;
+   }
+
+   // 계산불가
+   return null;
+ }
 
 }
 

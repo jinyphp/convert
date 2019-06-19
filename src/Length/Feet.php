@@ -63,7 +63,11 @@ class Feet
     }
 
     // 센치변환
+<<<<<<< HEAD
     public function centi($value=null)
+=======
+    public function centi()
+>>>>>>> main/master
     {
       if ($value) {
          // 입력한 값 기준으로 계산
@@ -125,6 +129,7 @@ class Feet
       return null;       
     }
 
+<<<<<<< HEAD
     //간변환
     public function gan($value=null)
     {
@@ -148,5 +153,42 @@ class Feet
       
       return null;       
    }
+=======
+    // 미터변환
+    public function meter()
+    {
+       return $this->value * 0.3048;
+    }
+
+    // 킬로변환
+    public function kilo()
+    {
+       return $this->value * 0.000305;
+    }
+
+    // 인치변환
+    public function inch()
+    {
+       return $this->value * 12;
+    }
+
+    //야드변환
+    public function yard()
+    {
+       return $this->value * 0.333333;
+    }
+
+    //간변환
+    public function gan()
+    {
+       return $this->value * 0.16764;
+    }
+
+    //정변환
+    public function jung()
+    {
+       return $this->value * 0.002794;
+    }
+>>>>>>> main/master
 
 }

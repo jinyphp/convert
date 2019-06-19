@@ -18,6 +18,10 @@ echo $obj->centi()."\n";
 echo $obj->centi(2)."\n";
 
 // 헬퍼함수 처리
+<<<<<<< HEAD
  echo convMeterCenti(3);
  echo convMeterCenti(4);
  echo convMeterCenti(5);
+=======
+echo convMeterCenti(3)."\n";
+>>>>>>> main/master
