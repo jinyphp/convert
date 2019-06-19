@@ -4,8 +4,40 @@ namespace Jiny\Convert;
 
 abstract class Unit
 {
+    protected $value;
+
+    public function type()
+    {
+        return self::TYPE;
+    }
     abstract public function setValue($value);
     abstract public function getValue();
+
+    private static $Instance;
+    public static function instance()
+    {
+        if (!isset(self::$Instance)) {
+            self::$Instance = new self();
+        }
+
+        return self::$Instance;
+    }
+
+    /**
+     * 값 지정
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * 값 출력
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 
     public function conv($value, $rate)
     {

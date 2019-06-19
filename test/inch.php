@@ -14,15 +14,6 @@ echo $obj->type()."\n";
 //  변환
 echo $obj->centi()."\n";
 
-echo $obj->feet()."\n";
-
-echo $obj->foot()."\n";
-
-echo $obj->gan()."\n";
-
-echo $obj->jung()."\n";
-
-echo $obj->meter()."\n";
 
 // 직접 지정
 echo $obj->centi(2)."\n";
