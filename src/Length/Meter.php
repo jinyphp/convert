@@ -3,9 +3,11 @@
 
 namespace Jiny\Convert\Length;
 
-class Meter
+use Jiny\Convert\Unit;
+
+class Meter extends Unit
 {
-    private $value;
+    protected $value;
 
     /**
      * 객체 타입 상수지정
@@ -67,16 +69,20 @@ class Meter
      */
     public function centi($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 100;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 100;
-        }
 
-        // 계산불가
-        return null;
+        return $this->conv($value, 100);
+       
+        // if ($value) {
+        //     // 입력한 값 기준으로 계산
+        //     return $value * 100;
+        // } else if($this->value) {
+        //     // 설정 프로퍼티 기준으로 계산
+        //     return $this->value * 100;
+        // }
+
+        // // 계산불가
+        // return null;
+        // */
     }
 
     /**
