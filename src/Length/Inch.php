@@ -50,4 +50,4 @@ class Inch
        return $this->value * 0.01397;
     }
 
-   }
+}
