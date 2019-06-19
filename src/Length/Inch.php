@@ -63,16 +63,7 @@ class Inch
 
 	public function centi($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 2.54;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 2.54;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 2.54);
 	}
 	
 	 /**
@@ -81,16 +72,7 @@ class Inch
 
 	public function meter($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 0.0254;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 0.0254;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 0.0254);
 	}
 	
 	 /**
@@ -99,16 +81,7 @@ class Inch
 
 	public function feet($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 0.083333;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 0.083333;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 0.083333);
 	}
 	
 	/**
@@ -117,16 +90,7 @@ class Inch
 
 	public function foot($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 0.08382;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 0.08382;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 0.08382);
 	}
 
 	/**
@@ -135,16 +99,7 @@ class Inch
 	
 	public function jung($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 0.000233;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 0.000233;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 0.000233);
 	}
 	
 	/**
@@ -153,16 +108,7 @@ class Inch
 
 	public function gan($value=null)
     {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 0.01397;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 0.01397;
-        }
-
-        // 계산불가
-        return null;
+		return $this->conv($value, 0.01397);
     }
 
 }
