@@ -3,8 +3,10 @@
 
 namespace Jiny\Convert\Length;
 
-class Jung {
-    private $value;
+use Jiny\Convert\Unit;
+
+class Jung extends Unit{
+    protected $value;
 
     /**
      * 객체 타입 상수지정
@@ -25,7 +27,7 @@ class Jung {
         }
         return self::$Instance;
     }
-    
+
     /**
      * 초기화
      */
@@ -57,90 +59,42 @@ class Jung {
      * 센티미터(centimeter) 변환
      */
     public function centi($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 10909.0909;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 10909.0909;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 10909.0909);
     }
 
     /**
      * 미터(meter) 변환
      */
     public function meter($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 109.090909;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 109.090909;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 109.090909);
     }
 
     /**
      * 인치(inch) 변환
      */
     public function inch($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 4294.91768;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 4294.91768;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 4294.91768);
     }
     
     /**
      * 간(gan) 변환
      */
     public function gan($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 60;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 60;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 60);
     }
 
     /**
      * 피트(feet) 변환
      */
     public function feet($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 357.909807;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 357.909807;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 357.909807);
     }
 
     /**
      * 푸트(foot) 변환
      */
     public function foot($value=null) {
-        if ($value) {
-            // 입력한 값 기준으로 계산
-            return $value * 357.909807;
-        } else if($this->value) {
-            // 설정 프로퍼티 기준으로 계산
-            return $this->value * 357.909807;
-        }
-        // 계산불가
-        return null;
+        return $this->conv($value, 357.909807);
     }
 
     /**
