@@ -14,6 +14,18 @@ class Inch
     {
         return self::TYPE;
 	}
+	/**
+     * 싱글턴
+     */
+    private static $Instance;
+    public static function instance()
+    {
+        if (!isset(self::$Instance)) {
+            self::$Instance = new self();
+        }
+
+        return self::$Instance;
+    }
 
     public function __construct($value=null)
     {
