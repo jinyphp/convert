@@ -5,15 +5,56 @@ class Feet
 {
     private $value;
 
+    /**
+     * 객체 타입 상수지정 const
+     */
+    const TYPE="Feet";
+
+    public function type()
+    {
+        return self::TYPE;
+    }
+
+    /**
+     * 싱글턴
+     */
+    private static $Instance;
+    public static function instance()
+    {
+        if (!isset(self::$Instance)) {
+            self::$Instance = new self();
+        }
+
+        return self::$Instance;
+    }
+
+    /**
+     * 값 지정
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * 값 출력
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
     // $value
     //    public function __construct()
     //    {
     //        return $this->value * 3.97;
     //    }
 
-    public function __construct($value)
+    public function __construct($value=null)
     {
-       $this->value = $value;
+       if($value){
+         $this->value = $value;
+       }       
     }
 
     public function __invoke()
@@ -22,45 +63,90 @@ class Feet
     }
 
     // 센치변환
-    public function centi()
+    public function centi($value=null)
     {
-       return $this->value * 30.48;
-    }
+      if ($value) {
+         // 입력한 값 기준으로 계산
+         return $value * 30.48;
+     } else if($this->value) {
+         // 설정 프로퍼티 기준으로 계산
+         return $this->value * 30.48;
+     }
+
+     // 계산불가
+     return null;
+   }
 
     // 미터변환
-    public function meter()
+    public function meter($value=null)
     {
-       return $this->value * 0.3048;
+       if($value) {
+          return $value * 0.3048;
+       } else if($this->value) {
+          return $this->value * 0.3048;
+       }    
+       
+       return null;
     }
 
     // 킬로변환
-    public function kilo()
+    public function kilo($value=null)
     {
-       return $this->value * 0.000305;
-    }
+      if($value) {
+         return $value * 0.000305;
+      } else if($this->value) {
+         return $this->value * 0.000305;
+      }    
+      
+      return null;
+   }
 
     // 인치변환
-    public function inch()
+    public function inch($value=null)
     {
-       return $this->value * 12;
-    }
+      if($value) {
+         return $value * 12;
+      } else if($this->value) {
+         return $this->value * 12;
+      }    
+      
+      return null;   
+   }
 
     //야드변환
-    public function yard()
+    public function yard($value=null)
     {
-       return $this->value * 0.333333;
+      if($value) {
+         return $value * 0.333333;
+      } else if($this->value) {
+         return $this->value * 0.333333;
+      }    
+      
+      return null;       
     }
 
     //간변환
-    public function gan()
+    public function gan($value=null)
     {
-       return $this->value * 0.16764;
-    }
+      if($value) {
+         return $value * 0.16764;
+      } else if($this->value) {
+         return $this->value * 0.16764;
+      }    
+      
+      return null; 
+   }
 
     //정변환
-    public function jung()
+    public function jung($value=null)
     {
-       return $this->value * 0.002794;
-    }
+      if($value) {
+         return $value * 0.002794;
+      } else if($this->value) {
+         return $this->value * 0.002794;
+      }    
+      
+      return null;       
+   }
 
 }

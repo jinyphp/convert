@@ -4,8 +4,8 @@ require "../../../autoload.php";
 
 use Jiny\Convert\Length\Meter as LengthMeter;
 
-$obj = new Jiny\Convert\Length\Meter(1);
-//$obj = new LengthMeter(1);
+//$obj = new Jiny\Convert\Length\Meter(1);
+$obj = new LengthMeter(1);
 
 // 타입확인
 echo $obj::TYPE."\n";

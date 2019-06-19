@@ -8,7 +8,7 @@ class Meter
     private $value;
 
     /**
-     * 객체 타입 상수지정
+     * 객체 타입 상수지정 const
      */
     const TYPE="Meter";
 
