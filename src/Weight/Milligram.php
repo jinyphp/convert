@@ -1,15 +1,15 @@
 <?php
-// 길이변환
+// 무게변환
 
-namespace Jiny\Convert\Length;
+namespace Jiny\Convert\Weight;
 
-class Jung {
+class Milligram {
     private $value;
 
     /**
      * 객체 타입 상수지정
      */
-    const TYPE="Jung";
+    const TYPE="Milligram";
 
     public function type() {
         return self::TYPE;
@@ -54,90 +54,120 @@ class Jung {
     }
 
     /**
-     * 센티미터(centimeter) 변환
+     * 그램(gram) 변환
      */
-    public function centi($value=null) {
+    public function gram($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 10909.0909;
+            return $value * 0.001;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 10909.0909;
+            return $this->value * 0.001;
         }
         // 계산불가
         return null;
     }
 
     /**
-     * 미터(meter) 변환
+     * 킬로그램(kilogram) 변환
      */
-    public function meter($value=null) {
+    public function kilogram($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 109.090909;
+            return $value * 1e-6;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 109.090909;
+            return $this->value * 1e-6;
         }
         // 계산불가
         return null;
     }
 
     /**
-     * 인치(inch) 변환
+     * 톤(ton) 변환
      */
-    public function inch($value=null) {
+    public function ton($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 4294.91768;
+            return $value * 10e-10;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 4294.91768;
+            return $this->value * 10e-10;
         }
         // 계산불가
         return null;
     }
     
     /**
-     * 간(gan) 변환
+     * 킬로톤(kiloton) 변환
      */
-    public function gan($value=null) {
+    public function kiloton($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 60;
+            return $value * 1e-12;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 60;
+            return $this->value * 1e-12;
         }
         // 계산불가
         return null;
     }
 
     /**
-     * 피트(feet) 변환
+     * 그레인(grain) 변환
      */
-    public function feet($value=null) {
+    public function grain($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 357.909807;
+            return $value * 0.015432;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 357.909807;
+            return $this->value * 0.015432;
         }
         // 계산불가
         return null;
     }
 
     /**
-     * 푸트(foot) 변환
+     * 온스(ounce) 변환
      */
-    public function foot($value=null) {
+    public function ounce($value=null) {
         if ($value) {
             // 입력한 값 기준으로 계산
-            return $value * 357.909807;
+            return $value * 0.000035;
         } else if($this->value) {
             // 설정 프로퍼티 기준으로 계산
-            return $this->value * 357.909807;
+            return $this->value * 0.000035;
+        }
+        // 계산불가
+        return null;
+    }
+
+    /**
+     * 파운드(pound) 변환
+     */
+    public function pound($value=null) {
+        if ($value) {
+            // 입력한 값 기준으로 계산
+            return $value * 2.2046e-6;
+        } else if($this->value) {
+            // 설정 프로퍼티 기준으로 계산
+            return $this->value * 2.2046e-6;
+        }
+        // 계산불가
+        return null;
+    }
+
+    /**
+     * 근(geun) 변환
+     */
+    public function geun($value=null) {
+        if ($value) {
+            // 입력한 값 기준으로 계산
+            return $value * 1.6667e-6;
+        } else if($this->value) {
+            // 설정 프로퍼티 기준으로 계산
+            return $this->value * 1.6667e-6;
         }
         // 계산불가
         return null;
