@@ -28,5 +28,9 @@ echo $obj->meter()."\n";
 echo $obj->centi(2)."\n";
 
 // 헬퍼함수 처리
+<<<<<<< HEAD:test/inch.php
 // echo convMeterCenti(3)."\n";
 
+=======
+echo convMeterCenti(3)."\n";
+>>>>>>> main/master:test/meter.php
