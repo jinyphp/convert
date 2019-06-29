@@ -7,31 +7,11 @@ use Jiny\Convert\Unit;
 
 class Gan extends Unit
 {
-    protected $value;
-
     /**
      * 객체 타입 상수지정
      */
     const TYPE="Gan";
-
-    public function type()
-    {
-        return self::TYPE;
-    }
-
-    /**
-     * 싱글턴
-     */
-    private static $Instance;
-    public static function instance()
-    {
-        if (!isset(self::$Instance)) {
-            self::$Instance = new self();
-        }
-
-        return self::$Instance;
-    }
-
+    
     /**
      * 초기화
      */
@@ -47,25 +27,6 @@ class Gan extends Unit
         return $this->value;
     }
 
-    /**
-     * 값 지정
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-
-    /**
-     * 값 출력
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    /**
-     * 센치미터 변환
-     */
     public function centi($value=null)
     {
         return $this->conv($value, 181.818182);
@@ -95,8 +56,4 @@ class Gan extends Unit
     {
         return $this->conv($value, 0.016667);
     }
-
-    /**
-     * end of class
-     */
 }
