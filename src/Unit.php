@@ -10,9 +10,10 @@ abstract class Unit
     {
         return self::TYPE;
     }
-    abstract public function setValue($value);
-    abstract public function getValue();
 
+    /**
+     * 싱글턴
+     */
     private static $Instance;
     public static function instance()
     {
