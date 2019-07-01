@@ -1,5 +1,9 @@
 <?php
-// 길이변환
+/**
+ * jinyphp/convert
+ * author : Hojin Lee (infohojin@gmail.com)
+ */
+
 namespace Jiny\Convert\Length;
 use Jiny\Convert\Unit;
 class Meter extends Unit
