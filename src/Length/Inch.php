@@ -1,31 +1,21 @@
 <?php
 namespace  Jiny\Convert\Length;
 
-class Inch
+use Jiny\Convert\Unit;
+
+class Inch extends Unit
 {
-    private $value;
 
     /**
      * 객체 타입 상수지정
      */
     const TYPE="Inch";
 
-    public function type()
-    {
-        return self::TYPE;
-	}
+
 	/**
      * 싱글턴
      */
-    private static $Instance;
-    public static function instance()
-    {
-        if (!isset(self::$Instance)) {
-            self::$Instance = new self();
-        }
-
-        return self::$Instance;
-    }
+   
 
     public function __construct($value=null)
     {
@@ -39,23 +29,7 @@ class Inch
        return $this->value;
 	}
 	
-	/**
-     * 값 지정
-     */
-
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-
-    /**
-     * 값 출력
-     */
-
-    public function getValue()
-    {
-        return $this->value;
-	}
+	
 
 	/**
      * 센티미터(centimeter) 변환

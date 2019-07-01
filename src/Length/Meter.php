@@ -1,17 +1,13 @@
 <?php
 // 길이변환
-
 namespace Jiny\Convert\Length;
-
 use Jiny\Convert\Unit;
-
 class Meter extends Unit
 {
     /**
      * 객체 타입 상수지정
      */
     const TYPE="Meter";
-
     /**
      * 초기화
      */
@@ -21,12 +17,10 @@ class Meter extends Unit
             $this->value = $value;
         }
     }
-
     public function __invoke()
     {
         return $this->value; 
     }
-
     /**
      * 센치미터 변환
      */
@@ -34,7 +28,6 @@ class Meter extends Unit
     {
         return $this->conv($value, 100);
     }
-
     /**
      * end of class
      */
