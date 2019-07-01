@@ -1,19 +1,23 @@
 <?php
-// 길이변환
-
+/**
+ * jinyphp/convert
+ * Author: Lee Joo Yeon (leejooy96@gmail.com)
+ */
 namespace Jiny\Convert\Length;
 
 use Jiny\Convert\Unit;
 
 class Gan extends Unit
 {
-    /**
-     * 객체 타입 상수지정
-     */
     const TYPE="Gan";
     
+    public function type()
+    {
+        return self::TYPE;
+    }
+    
     /**
-     * 초기화
+     * Initialize
      */
     public function __construct($value=null)
     {

@@ -1,19 +1,23 @@
 <?php
-// 온도변환
-
+/**
+ * jinyphp/convert
+ * Author: Lee Joo Yeon (leejooy96@gmail.com)
+ */
 namespace Jiny\Convert\Temperature;
 
 use Jiny\Convert\Unit;
 
 class Fahrenheit extends Unit
 {
-    /**
-     * 객체 타입 상수지정
-     */
     const TYPE="Fahrenheit";
+
+    public function type()
+    {
+        return self::TYPE;
+    }
     
     /**
-     * 초기화
+     * Initialize
      */
     public function __construct($value=null)
     {
