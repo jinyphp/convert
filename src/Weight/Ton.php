@@ -3,13 +3,13 @@
 
 namespace Jiny\Convert\Weight;
 
-class Milligram {
+class Ton {
     private $value;
 
     /**
      * 객체 타입 상수지정
      */
-    const TYPE="Milligram";
+    const TYPE="Ton";
 
     public function type() {
         return self::TYPE;
@@ -36,59 +36,59 @@ class Milligram {
     }
 
     /**
+     * 밀리그램(milligram) 변환
+     */
+    public function milligram($value=null) {
+        return $this->conv($value, 1e+9);
+    }
+
+    /**
      * 그램(gram) 변환
      */
     public function gram($value=null) {
-        return $this->conv($value, 0.001);
+        return $this->conv($value, 1000000);
     }
 
     /**
      * 킬로그램(kilogram) 변환
      */
     public function kilogram($value=null) {
-        return $this->conv($value, 1e-6);
-    }
-
-    /**
-     * 톤(ton) 변환
-     */
-    public function ton($value=null) {
-        return $this->conv($value, 10e-10);
+        return $this->conv($value, 1000);
     }
     
     /**
      * 킬로톤(kiloton) 변환
      */
     public function kiloton($value=null) {
-        return $this->conv($value, 1e-12);
+        return $this->conv($value, 0.001);
     }
 
     /**
      * 그레인(grain) 변환
      */
     public function grain($value=null) {
-        return $this->conv($value, 0.015432);
+        return $this->conv($value, 15432358.4);
     }
 
     /**
      * 온스(ounce) 변환
      */
     public function ounce($value=null) {
-        return $this->conv($value, 0.000035);
+        return $this->conv($value, 35273.9619);
     }
 
     /**
      * 파운드(pound) 변환
      */
     public function pound($value=null) {
-        return $this->conv($value, 2.2046e-6);
+        return $this->conv($value, 2204.62262);
     }
 
     /**
      * 근(geun) 변환
      */
     public function geun($value=null) {
-        return $this->conv($value, 1.6667e-6);
+        return $this->conv($value, 1666.66667);
     }
 
     /**

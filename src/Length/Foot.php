@@ -2,9 +2,11 @@
 
 namespace Jiny\Convert\Length;
 
-class Foot
+use Jiny\Convert\Unit;
+
+class Foot extends Unit
 {
-    private $value;
+    protected $value;
     
     /**
      * 객체 타입 상수지정
@@ -61,63 +63,38 @@ class Foot
     }
 
     public function centi($value=null)
-    {   
-        if ($value){
-            return $value * 30.48; 
-        } else if($this->value) {
-            return $this->value * 30.48; 
-        }
-        
+    {
+        return $this->conv($value, 30.48);
     }
 
     public function feet($value=null)
     {
-        if ($value){
-            return $value * 1;
-        } else if($this->value) {
-            return $this->value * 1;
-        }
+        return $this->conv($value,1);
     }
 
     public function meter($value=null)
     {   
-        if ($value){
-            return $value * 0.3048;
-        } else if($this->value) {
-            return $this->value * 0.3048;
-        }
-        
+        return $this->conv($value,0.3048);
     }
+
     public function inch($value=null)
     {   
-        if ($value){
-            return $value * 12;
-        } else if($this->value) {
-        return $this->value * 12;
-        }
-    }   
+        return $this->conv($value,12);
+    }
+
     public function jung($value=null)
     {   
-        if ($value){
-            return $value * 0.002794;
-        } else if($this->value){
-        return $this->value * 0.002794;
-        }
+        return $this->conv($value,0.002794);
     }
+
     public function gan($value=null)
     {   
-        if ($value){
-            return $value * 0.16764;
-        } else if($this->value) {
-        return $this->value * 0.16764;
-        }
+        return $this->conv($value,0.16764);
     }
+
     public function lee($value=null)
     {   
-        if ($value){
-            return $value * 0.000776;
-        } else if($this->value) {
-        return $this->value * 0.000776;
-        }
+        return $this->conv($value,0.000776);
     }
+    
 }
