@@ -1,5 +1,5 @@
 <?php
-// 온도변환
+// 압력변환
 
 namespace Jiny\Convert\Pressure;
 
